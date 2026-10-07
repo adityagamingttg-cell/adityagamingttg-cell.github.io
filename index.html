@@ -1,12 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Gaming TTG</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aditya Gaming TTG | Official Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070707;
+    color: white;
+}
+
+/* HEADER */
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    background:
+        radial-gradient(circle at top, #3b2b00 0%, #120d00 25%, #070707 65%);
+}
+
+.hero {
+    max-width: 900px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #d4af37;
+    border-radius: 30px;
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 10vw, 90px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #fff, #d4af37, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    margin: 20px auto;
+    color: #bdbdbd;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.youtube {
+    background: #e50914;
+    color: white;
+}
+
+.gold {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(5,5,5,0.95);
+    border-bottom: 1px solid #242424;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.title h2 {
+    font-size: 38px;
+    color: #d4af37;
+}
+
+.title p {
+    color: #888;
+    margin-top: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #262626;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #d4af37;
+}
+
+.card .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #999;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    background: #0d0d0d;
+    border-radius: 25px;
+    padding: 45px 25px;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+footer strong {
+    color: #d4af37;
+}
+
+.social {
+    margin: 20px 0;
+}
+
+.social a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social a:hover {
+    color: #d4af37;
+}
+
+@media(max-width:600px) {
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>ADITYA GAMING TTG</h1>
-    <p>Welcome to my official gaming website!</p>
+
+<header id="home">
+    <div class="hero">
+
+        <div class="badge">OFFICIAL GAMING WEBSITE</div>
+
+        <h1>ADITYA GAMING TTG</h1>
+
+        <p>
+            Welcome to the official home of Aditya Gaming TTG.
+            Gaming, Free Fire MAX, live streams, highlights and more.
+        </p>
+
+        <div class="buttons">
+            <a class="btn youtube"
+               href="https://www.youtube.com/"
+               target="_blank">
+               ▶ YouTube Channel
+            </a>
+
+            <a class="btn gold" href="#games">
+               🎮 Explore Gaming
+            </a>
+        </div>
+
+    </div>
+</header>
+
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#games">GAMING</a>
+    <a href="#live">LIVE</a>
+    <a href="#about">ABOUT</a>
+</nav>
+
+<section id="games">
+
+    <div class="title">
+        <h2>🎮 GAMING ZONE</h2>
+        <p>Welcome to my gaming world.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🔥</div>
+            <h3>FREE FIRE MAX</h3>
+            <p>
+                Rank push, intense fights, highlights,
+                challenges and entertaining gameplay.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👑</div>
+            <h3>RANK PUSH</h3>
+            <p>
+                Road to Heroic and beyond.
+                Follow the journey and watch the grind.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎥</div>
+            <h3>GAMING VIDEOS</h3>
+            <p>
+                Shorts, gameplay, funny moments,
+                edits and gaming entertainment.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="live">
+
+    <div class="title">
+        <h2>🔴 LIVE STREAMS</h2>
+        <p>Catch the next gaming session.</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🎮</div>
+        <h3>ADITYA GAMING TTG LIVE</h3>
+        <p>
+            Join the live gaming sessions and become
+            part of the TTG Army.
+        </p>
+
+        <div class="buttons">
+            <a class="btn youtube"
+               href="https://www.youtube.com/"
+               target="_blank">
+               WATCH ON YOUTUBE
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="title">
+            <h2>👑 ABOUT ME</h2>
+        </div>
+
+        <p>
+            Hey! I'm Aditya, the creator behind
+            <strong>Aditya Gaming TTG</strong>.
+            This website is my official gaming hub where
+            I share my gaming content, live streams,
+            highlights and future projects.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <strong>ADITYA GAMING TTG</strong>
+
+    <div class="social">
+        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    </div>
+
+    © 2026 Aditya Gaming TTG. All Rights Reserved.
+
+</footer>
+
 </body>
 </html>
