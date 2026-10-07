@@ -705,8 +705,213 @@
     </div>
 
   </section>
+  
+  <li><a href="#videos">VIDEOS</a></li>
+
+  /* LATEST VIDEOS */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.video-card {
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: 0.35s;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(245,196,81,0.12);
+}
+
+.video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.video-card:hover .video-thumb img {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245,196,81,0.95);
+  color: #050505;
+  font-size: 24px;
+  box-shadow: 0 0 30px rgba(245,196,81,0.35);
+}
+
+.video-info {
+  padding: 20px;
+}
+
+.video-info h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.video-btn {
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff0b5, #d69f21);
+  color: #080808;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 850px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  <!-- LATEST VIDEOS -->
+<section id="videos">
+
+  <div class="section-container">
+
+    <div class="section-title">
+      <small>WATCH NOW</small>
+      <h2>LATEST VIDEOS</h2>
+      <p>
+        Latest gaming videos from Aditya Gaming TTG.
+      </p>
+    </div>
+
+    <div class="video-grid">
+
+      <!-- VIDEO 1 -->
+      <div class="video-card">
+
+        <a
+          href="https://youtu.be/jf1TO2BAB7g"
+          target="_blank"
+          class="video-thumb">
+
+          <img
+            src="https://img.youtube.com/vi/jf1TO2BAB7g/maxresdefault.jpg"
+            alt="FREE FIRE Emotional Story">
+
+          <div class="play-button">▶</div>
+
+        </a>
+
+        <div class="video-info">
+
+          <h3>
+            FREE FIRE ❤️ EMOTIONAL STORY | Wakh Ho Jana Song Montage
+          </h3>
+
+          <a
+            href="https://youtu.be/jf1TO2BAB7g"
+            target="_blank"
+            class="video-btn">
+            ▶ WATCH NOW
+          </a>
+
+        </div>
+
+      </div>
 
 
+      <!-- VIDEO 2 -->
+      <div class="video-card">
+
+        <a
+          href="https://youtu.be/aCP07hSbVmg"
+          target="_blank"
+          class="video-thumb">
+
+          <img
+            src="https://img.youtube.com/vi/aCP07hSbVmg/maxresdefault.jpg"
+            alt="Saiyaara Free Fire Montage">
+
+          <div class="play-button">▶</div>
+
+        </a>
+
+        <div class="video-info">
+
+          <h3>
+            Saiyaara Song Free Fire Montage | Brothers & Sister Emotional Gameplay
+          </h3>
+
+          <a
+            href="https://youtu.be/aCP07hSbVmg"
+            target="_blank"
+            class="video-btn">
+            ▶ WATCH NOW
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- VIDEO 3 -->
+      <div class="video-card">
+
+        <a
+          href="https://youtu.be/pyGrKqsE5KA"
+          target="_blank"
+          class="video-thumb">
+
+          <img
+            src="https://img.youtube.com/vi/pyGrKqsE5KA/maxresdefault.jpg"
+            alt="Minecraft with Keyboard Mouse">
+
+          <div class="play-button">▶</div>
+
+        </a>
+
+        <div class="video-info">
+
+          <h3>
+            MINECRAFT WITH KEYBOARD MOUSE | THE ULTIMATE MOBILE EXPERIENCE! 🥰
+          </h3>
+
+          <a
+            href="https://youtu.be/pyGrKqsE5KA"
+            target="_blank"
+            class="video-btn">
+            ▶ WATCH NOW
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  
   <!-- SOCIAL -->
   <section id="social">
 
