@@ -23,7 +23,6 @@
       --gold-light: #ffe8a3;
       --gold-dark: #a87808;
       --black: #050505;
-      --black-2: #0b0b0b;
       --card: rgba(255,255,255,0.045);
       --border: rgba(245,196,81,0.25);
       --text: #f7f7f7;
@@ -41,7 +40,6 @@
       overflow-x: hidden;
     }
 
-    /* GOLD GLOW */
     body::before {
       content: "";
       position: fixed;
@@ -90,14 +88,14 @@
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 20px;
       list-style: none;
     }
 
     .nav-links a {
       color: #ddd;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       transition: 0.3s;
     }
@@ -113,7 +111,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
     }
 
     .hero-container {
@@ -329,18 +326,6 @@
       overflow: hidden;
     }
 
-    .game-card::after {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      right: -35px;
-      top: -35px;
-      background: var(--gold);
-      filter: blur(55px);
-      opacity: 0.14;
-    }
-
     .game-card:hover {
       transform: translateY(-8px);
       border-color: rgba(245,196,81,0.6);
@@ -359,6 +344,85 @@
     .game-card p {
       color: #999;
       font-size: 12px;
+    }
+
+    /* LATEST VIDEOS */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .video-card {
+      overflow: hidden;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      transition: 0.35s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 18px 45px rgba(245,196,81,0.12);
+    }
+
+    .video-thumb {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.4s;
+    }
+
+    .video-card:hover .video-thumb img {
+      transform: scale(1.05);
+    }
+
+    .play-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(245,196,81,0.95);
+      color: #050505;
+      font-size: 24px;
+      box-shadow: 0 0 30px rgba(245,196,81,0.35);
+    }
+
+    .video-info {
+      padding: 20px;
+    }
+
+    .video-info h3 {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .video-btn {
+      display: inline-block;
+      padding: 9px 15px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fff0b5, #d69f21);
+      color: #080808;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
     }
 
     /* SOCIAL */
@@ -463,6 +527,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
       .social-grid {
         grid-template-columns: 1fr;
       }
@@ -521,6 +589,7 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
+
       <a href="#home" class="logo">
         ADITYA <span>GAMING TTG</span>
       </a>
@@ -529,15 +598,18 @@
         <li><a href="#home">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#games">GAMES</a></li>
+        <li><a href="#videos">VIDEOS</a></li>
         <li><a href="#social">SOCIAL</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
+
     </div>
   </nav>
 
 
   <!-- HERO -->
   <section class="hero" id="home">
+
     <div class="hero-container">
 
       <div class="hero-content">
@@ -560,8 +632,9 @@
         <div class="buttons">
 
           <a
-            href="https://www.youtube.com/c/AdityaGamingTTGOfficial"
+            href="https://youtube.com/@adityagamingttgofficial"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-gold">
             ▶ YouTube Channel
           </a>
@@ -606,6 +679,7 @@
       </div>
 
     </div>
+
   </section>
 
 
@@ -673,7 +747,6 @@
         </p>
       </div>
 
-
       <div class="games">
 
         <div class="game-card">
@@ -705,202 +778,128 @@
     </div>
 
   </section>
-  
-  <li><a href="#videos">VIDEOS</a></li>
 
-  /* LATEST VIDEOS */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
 
-.video-card {
-  overflow: hidden;
-  border-radius: 20px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  transition: 0.35s;
-}
-
-.video-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold);
-  box-shadow: 0 18px 45px rgba(245,196,81,0.12);
-}
-
-.video-thumb {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
-
-.video-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: 0.4s;
-}
-
-.video-card:hover .video-thumb img {
-  transform: scale(1.05);
-}
-
-.play-button {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(245,196,81,0.95);
-  color: #050505;
-  font-size: 24px;
-  box-shadow: 0 0 30px rgba(245,196,81,0.35);
-}
-
-.video-info {
-  padding: 20px;
-}
-
-.video-info h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 15px;
-}
-
-.video-btn {
-  display: inline-block;
-  padding: 9px 15px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #fff0b5, #d69f21);
-  color: #080808;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 900;
-}
-
-@media (max-width: 850px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-}
   <!-- LATEST VIDEOS -->
-<section id="videos">
+  <section id="videos">
 
-  <div class="section-container">
+    <div class="section-container">
 
-    <div class="section-title">
-      <small>WATCH NOW</small>
-      <h2>LATEST VIDEOS</h2>
-      <p>
-        Latest gaming videos from Aditya Gaming TTG.
-      </p>
-    </div>
+      <div class="section-title">
+        <small>WATCH NOW</small>
+        <h2>LATEST VIDEOS</h2>
+        <p>
+          Watch the latest gaming content from Aditya Gaming TTG.
+        </p>
+      </div>
 
-    <div class="video-grid">
+      <div class="video-grid">
 
-      <!-- VIDEO 1 -->
-      <div class="video-card">
 
-        <a
-          href="https://youtu.be/jf1TO2BAB7g"
-          target="_blank"
-          class="video-thumb">
-
-          <img
-            src="https://img.youtube.com/vi/jf1TO2BAB7g/maxresdefault.jpg"
-            alt="FREE FIRE Emotional Story">
-
-          <div class="play-button">▶</div>
-
-        </a>
-
-        <div class="video-info">
-
-          <h3>
-            FREE FIRE ❤️ EMOTIONAL STORY | Wakh Ho Jana Song Montage
-          </h3>
+        <!-- VIDEO 1 -->
+        <div class="video-card">
 
           <a
             href="https://youtu.be/jf1TO2BAB7g"
             target="_blank"
-            class="video-btn">
-            ▶ WATCH NOW
+            rel="noopener noreferrer"
+            class="video-thumb">
+
+            <img
+              src="https://img.youtube.com/vi/jf1TO2BAB7g/maxresdefault.jpg"
+              alt="Aditya Gaming TTG Free Fire video">
+
+            <div class="play-button">▶</div>
+
           </a>
+
+          <div class="video-info">
+
+            <h3>
+              FREE FIRE ❤️ EMOTIONAL STORY | Wakh Ho Jana Song Montage
+            </h3>
+
+            <a
+              href="https://youtu.be/jf1TO2BAB7g"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="video-btn">
+              ▶ WATCH NOW
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
 
-
-      <!-- VIDEO 2 -->
-      <div class="video-card">
-
-        <a
-          href="https://youtu.be/aCP07hSbVmg"
-          target="_blank"
-          class="video-thumb">
-
-          <img
-            src="https://img.youtube.com/vi/aCP07hSbVmg/maxresdefault.jpg"
-            alt="Saiyaara Free Fire Montage">
-
-          <div class="play-button">▶</div>
-
-        </a>
-
-        <div class="video-info">
-
-          <h3>
-            Saiyaara Song Free Fire Montage | Brothers & Sister Emotional Gameplay
-          </h3>
+        <!-- VIDEO 2 -->
+        <div class="video-card">
 
           <a
             href="https://youtu.be/aCP07hSbVmg"
             target="_blank"
-            class="video-btn">
-            ▶ WATCH NOW
+            rel="noopener noreferrer"
+            class="video-thumb">
+
+            <img
+              src="https://img.youtube.com/vi/aCP07hSbVmg/maxresdefault.jpg"
+              alt="Aditya Gaming TTG Free Fire montage">
+
+            <div class="play-button">▶</div>
+
           </a>
+
+          <div class="video-info">
+
+            <h3>
+              Saiyaara Song Free Fire Montage | Brothers & Sister Emotional Gameplay
+            </h3>
+
+            <a
+              href="https://youtu.be/aCP07hSbVmg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="video-btn">
+              ▶ WATCH NOW
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
 
-
-      <!-- VIDEO 3 -->
-      <div class="video-card">
-
-        <a
-          href="https://youtu.be/pyGrKqsE5KA"
-          target="_blank"
-          class="video-thumb">
-
-          <img
-            src="https://img.youtube.com/vi/pyGrKqsE5KA/maxresdefault.jpg"
-            alt="Minecraft with Keyboard Mouse">
-
-          <div class="play-button">▶</div>
-
-        </a>
-
-        <div class="video-info">
-
-          <h3>
-            MINECRAFT WITH KEYBOARD MOUSE | THE ULTIMATE MOBILE EXPERIENCE! 🥰
-          </h3>
+        <!-- VIDEO 3 -->
+        <div class="video-card">
 
           <a
             href="https://youtu.be/pyGrKqsE5KA"
             target="_blank"
-            class="video-btn">
-            ▶ WATCH NOW
+            rel="noopener noreferrer"
+            class="video-thumb">
+
+            <img
+              src="https://img.youtube.com/vi/pyGrKqsE5KA/maxresdefault.jpg"
+              alt="Aditya Gaming TTG Minecraft video">
+
+            <div class="play-button">▶</div>
+
           </a>
+
+          <div class="video-info">
+
+            <h3>
+              MINECRAFT WITH KEYBOARD MOUSE | THE ULTIMATE MOBILE EXPERIENCE!
+            </h3>
+
+            <a
+              href="https://youtu.be/pyGrKqsE5KA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="video-btn">
+              ▶ WATCH NOW
+            </a>
+
+          </div>
 
         </div>
 
@@ -908,10 +907,9 @@
 
     </div>
 
-  </div>
+  </section>
 
-</section>
-  
+
   <!-- SOCIAL -->
   <section id="social">
 
@@ -925,13 +923,15 @@
         </p>
       </div>
 
-
       <div class="social-grid">
 
+
+        <!-- YOUTUBE -->
         <a
           class="social"
-          href="https://www.youtube.com/c/AdityaGamingTTGOfficial"
-          target="_blank">
+          href="https://youtube.com/@adityagamingttgofficial"
+          target="_blank"
+          rel="noopener noreferrer">
 
           <div class="social-icon">▶️</div>
 
@@ -944,10 +944,12 @@
         </a>
 
 
+        <!-- INSTAGRAM -->
         <a
           class="social"
           href="https://www.instagram.com/adityagamingttg"
-          target="_blank">
+          target="_blank"
+          rel="noopener noreferrer">
 
           <div class="social-icon">📸</div>
 
@@ -960,10 +962,12 @@
         </a>
 
 
+        <!-- X -->
         <a
           class="social"
           href="https://www.twitter.com/AdityaTtg63348"
-          target="_blank">
+          target="_blank"
+          rel="noopener noreferrer">
 
           <div class="social-icon">𝕏</div>
 
@@ -1046,4 +1050,4 @@
   </script>
 
 </body>
-</html>
+          </html>
