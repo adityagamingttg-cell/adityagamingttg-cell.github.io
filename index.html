@@ -3,535 +3,1061 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="Welcome to Aditya Gaming TTG — Gaming, entertainment and epic content.">
-<title>Aditya Gaming TTG | Official Website</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Aditya Gaming TTG | Official Gaming Website</title>
+<meta name="description" content="Welcome to the official website of Aditya Gaming TTG. Free Fire MAX, GTA V, Minecraft, gaming videos, live streams and more.">
+<meta name="keywords" content="Aditya Gaming TTG, Free Fire MAX, gaming, Indian gamer, GTA V, Minecraft, TTG Army">
+<meta name="author" content="Aditya Gaming TTG">
+<meta name="theme-color" content="#050505">
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 :root {
-  --bg:#080808;
-  --surface:#111111;
-  --yellow:#ffd500;
-  --white:#f7f7f7;
-  --muted:#999;
-  --border:rgba(255,213,0,.18);
+  --gold: #f5c451;
+  --gold-light: #ffe8a3;
+  --gold-dark: #a87808;
+  --black: #050505;
+  --card: rgba(255,255,255,0.045);
+  --border: rgba(245,196,81,0.25);
+  --text: #f7f7f7;
+  --muted: #a9a9a9;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--white);
-  font-family:'Rajdhani',sans-serif;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(1160px,90%);margin:auto}
-
-/* Background */
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
+body {
+  font-family: Arial, Helvetica, sans-serif;
   background:
-  radial-gradient(ellipse at 80% 10%,rgba(255,213,0,.09),transparent 35%),
-  radial-gradient(ellipse at 5% 65%,rgba(75,80,255,.07),transparent 30%);
-}
-.grid-bg{
-  position:fixed;inset:0;z-index:-1;pointer-events:none;
-  opacity:.12;
-  background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
-  background-size:55px 55px;
+    radial-gradient(circle at 20% 10%, rgba(245,196,81,0.10), transparent 30%),
+    radial-gradient(circle at 80% 40%, rgba(245,196,81,0.07), transparent 30%),
+    #050505;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Navbar */
-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(8,8,8,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
-}
-.nav{
-  min-height:76px;display:flex;align-items:center;
-  justify-content:space-between;gap:20px;
-}
-.logo{
-  font-family:'Orbitron',sans-serif;font-size:19px;
-  font-weight:900;letter-spacing:1px;
-}
-.logo span{color:var(--yellow)}
-.nav-links{display:flex;align-items:center;gap:30px}
-.nav-links a{
-  color:#bbb;font-size:17px;font-weight:700;
-  transition:.25s;
-}
-.nav-links a:hover{color:var(--yellow)}
-.nav-btn{
-  background:var(--yellow);color:#080808;
-  padding:11px 19px;border-radius:5px;
-  font-weight:800;font-size:16px;
-}
-.menu-btn{
-  display:none;background:none;border:1px solid var(--border);
-  color:var(--yellow);font-size:25px;padding:4px 12px;
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  left: -250px;
+  background: rgba(245,196,81,0.08);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -1;
 }
 
-/* Hero */
-.hero{
-  min-height:650px;display:flex;align-items:center;
-  position:relative;padding:85px 0 100px;
-}
-.hero-content{max-width:750px}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  color:var(--yellow);font-size:15px;font-weight:800;
-  letter-spacing:3px;text-transform:uppercase;
-  border:1px solid var(--border);
-  padding:9px 14px;border-radius:3px;
-  background:rgba(255,213,0,.045);
-}
-.dot{
-  height:7px;width:7px;border-radius:50%;
-  background:var(--yellow);box-shadow:0 0 12px var(--yellow);
-}
-.hero h1{
-  font-family:'Orbitron',sans-serif;
-  font-size:clamp(42px,8vw,88px);
-  line-height:1.08;font-weight:900;
-  letter-spacing:-3px;margin:27px 0 20px;
-}
-.hero h1 span{
-  color:var(--yellow);
-  text-shadow:0 0 35px rgba(255,213,0,.18);
-}
-.hero p{
-  color:#aaa;font-size:21px;line-height:1.6;
-  max-width:580px;margin-bottom:32px;
-}
-.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:14px 23px;border-radius:4px;
-  font-size:17px;font-weight:800;transition:.3s;
-}
-.btn-primary{background:var(--yellow);color:#080808}
-.btn-primary:hover{box-shadow:0 0 28px rgba(255,213,0,.3);transform:translateY(-3px)}
-.btn-outline{border:1px solid #555;color:white}
-.btn-outline:hover{border-color:var(--yellow);color:var(--yellow)}
-.hero-bottom{
-  position:absolute;bottom:30px;left:0;
-  color:#777;font-size:13px;letter-spacing:3px;
-}
-.hero-bottom span{color:var(--yellow)}
-
-/* Sections */
-section{padding:85px 0}
-.section-top{
-  display:flex;justify-content:space-between;
-  align-items:end;gap:20px;margin-bottom:35px;
-}
-.kicker{
-  color:var(--yellow);font-weight:800;
-  font-size:14px;letter-spacing:3px;text-transform:uppercase;
-}
-.section-title{
-  font-family:'Orbitron',sans-serif;
-  font-size:clamp(26px,4vw,39px);
-  margin-top:10px;
-}
-.section-title span{color:var(--yellow)}
-.section-desc{color:var(--muted);font-size:17px;margin-top:8px}
-
-/* Game cards */
-.games{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-}
-.game-card{
-  min-height:280px;position:relative;overflow:hidden;
-  background:linear-gradient(145deg,#1b1b1b,#0d0d0d);
-  border:1px solid #292929;border-radius:9px;
-  padding:25px;display:flex;flex-direction:column;
-  justify-content:end;transition:.35s;
-}
-.game-card:before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(circle at 80% 20%,rgba(255,213,0,.15),transparent 48%);
-  transition:.35s;
-}
-.game-card:hover{
-  transform:translateY(-7px);
-  border-color:var(--yellow);
-  box-shadow:0 15px 45px rgba(0,0,0,.4);
-}
-.game-number{
-  position:absolute;top:18px;right:20px;
-  font-family:'Orbitron';font-size:34px;
-  color:rgba(255,213,0,.22);font-weight:900;
-}
-.game-icon{
-  font-size:42px;margin-bottom:15px;position:relative;
-}
-.game-card h3{
-  font-family:'Orbitron';font-size:19px;
-  margin-bottom:7px;position:relative;
-}
-.game-card p{color:#999;font-size:16px;position:relative}
-.game-tag{
-  color:var(--yellow);font-size:12px;
-  letter-spacing:2px;font-weight:800;
-  margin-bottom:10px;position:relative;
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(5,5,5,0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(245,196,81,0.14);
 }
 
-/* About */
-.about-box{
-  display:grid;grid-template-columns:1.1fr .9fr;
-  gap:35px;align-items:center;
-  background:linear-gradient(130deg,#151515,#0b0b0b);
-  border:1px solid #282828;border-radius:10px;
-  padding:clamp(25px,5vw,55px);
-}
-.about-copy p{
-  color:#aaa;font-size:19px;line-height:1.7;
-  margin:18px 0 25px;
-}
-.about-visual{
-  min-height:270px;border:1px solid var(--border);
-  border-radius:8px;display:flex;align-items:center;
-  justify-content:center;text-align:center;
-  background:radial-gradient(circle,rgba(255,213,0,.12),transparent 65%);
-}
-.about-visual strong{
-  font-family:'Orbitron';font-size:clamp(28px,5vw,48px);
-  color:var(--yellow);text-shadow:0 0 25px rgba(255,213,0,.2);
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Videos */
-.video-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-}
-.video-card{
-  overflow:hidden;background:#111;
-  border:1px solid #292929;border-radius:8px;
-  transition:.3s;
-}
-.video-card:hover{transform:translateY(-5px);border-color:var(--yellow)}
-.video-thumb{position:relative;aspect-ratio:16/9;background:#191919}
-.video-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.play{
-  position:absolute;inset:0;display:grid;place-items:center;
-  background:rgba(0,0,0,.18);font-size:35px;
-  color:var(--yellow);
-}
-.video-info{padding:17px}
-.video-info h3{font-size:19px;font-weight:800}
-.video-info p{color:#888;margin-top:5px;font-size:14px}
-
-/* Community */
-.community{
-  text-align:center;padding:65px 25px;
-  border:1px solid var(--border);border-radius:10px;
-  background:radial-gradient(ellipse at center,rgba(255,213,0,.1),transparent 70%),#101010;
-}
-.community h2{
-  font-family:'Orbitron';font-size:clamp(25px,5vw,43px);
-  margin-bottom:15px;
-}
-.community h2 span{color:var(--yellow)}
-.community p{color:#aaa;font-size:18px;margin-bottom:25px}
-
-/* Social */
-.social-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:15px;
-}
-.social-card{
-  border:1px solid #292929;background:#111;
-  padding:22px;border-radius:7px;transition:.3s;
-}
-.social-card:hover{border-color:var(--yellow);transform:translateY(-4px)}
-.social-card strong{display:block;font-size:20px}
-.social-card span{color:#999;font-size:15px}
-.social-icon{font-size:26px;color:var(--yellow);margin-bottom:12px}
-
-/* Footer */
-footer{
-  border-top:1px solid #252525;
-  padding:30px 0;color:#777;text-align:center;
-  font-size:15px;
-}
-footer strong{color:var(--yellow)}
-footer .footer-logo{
-  font-family:'Orbitron';font-size:18px;
-  color:white;margin-bottom:10px;
+.logo {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(25px);transition:.7s}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.logo span { color: white; }
 
-@media(max-width:800px){
-  .nav-links{
-    display:none;position:absolute;top:76px;left:0;right:0;
-    padding:25px 5%;background:#0b0b0b;
-    border-bottom:1px solid var(--border);
-    flex-direction:column;align-items:flex-start;gap:20px;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 140px 25px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: rgba(245,196,81,0.04);
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 82px);
+  line-height: 0.98;
+  text-transform: uppercase;
+  font-weight: 950;
+  letter-spacing: -3px;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #fff, var(--gold), #fff1bd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  transition: 0.3s;
+  border: 1px solid var(--border);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #fff0b5, #d69f21);
+  color: #080808;
+  box-shadow: 0 0 30px rgba(245,196,81,0.15);
+}
+
+.btn-dark {
+  color: white;
+  background: rgba(255,255,255,0.035);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(245,196,81,0.15);
+}
+
+/* HERO IMAGE */
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 5%;
+  background: var(--gold);
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.hero-image img {
+  width: min(100%, 510px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid rgba(245,196,81,0.4);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03),
+    0 30px 80px rgba(0,0,0,0.7);
+}
+
+/* SECTIONS */
+section { padding: 90px 25px; }
+
+.section-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title small {
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  font-size: clamp(32px, 5vw, 50px);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 10px auto 0;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 55px;
+}
+
+.stat {
+  padding: 25px;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 3px;
+}
+
+.stat span { color: #aaa; font-size: 13px; }
+
+/* ABOUT */
+.about-box {
+  padding: 40px;
+  border-radius: 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(245,196,81,0.07),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+}
+
+.about-box p {
+  color: #c5c5c5;
+  margin-bottom: 17px;
+}
+
+.about-box p:last-child { margin-bottom: 0; }
+
+.highlight {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* LUXURY JOIN THE TTG ARMY */
+.ttg-luxury {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 48px 28px;
+  border: 1px solid rgba(245,196,81,0.65);
+  border-radius: 25px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(245,196,81,0.12),
+      transparent 65%
+    ),
+    linear-gradient(145deg, #0d0d0d, #050505 70%);
+  box-shadow:
+    0 18px 55px rgba(0,0,0,0.45),
+    inset 0 0 30px rgba(245,196,81,0.025);
+}
+
+.ttg-luxury::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffe8a3,
+    transparent
+  );
+}
+
+.ttg-crown {
+  font-size: 38px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 12px rgba(245,196,81,0.25));
+}
+
+.ttg-luxury .ttg-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.ttg-luxury h2 {
+  color: #fff;
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.ttg-luxury h2 span { color: var(--gold); }
+
+.ttg-luxury p {
+  color: #bcbcbc;
+  max-width: 580px;
+  margin: 0 auto 25px;
+}
+
+.ttg-subscribe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto;
+  padding: 16px 25px;
+  border-radius: 12px;
+  border: 1px solid #ffe8a3;
+  background: linear-gradient(
+    135deg,
+    #ffe8a3,
+    #f5c451 55%,
+    #d69f21
+  );
+  color: #080808;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 0 28px rgba(245,196,81,0.16);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.ttg-subscribe:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 35px rgba(245,196,81,0.3);
+}
+
+.ttg-footer {
+  color: #898989;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-top: 19px;
+}
+
+/* GAMES */
+.games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.game-card {
+  padding: 28px 20px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.025),
+    rgba(245,196,81,0.07)
+  );
+  border: 1px solid var(--border);
+  transition: 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(245,196,81,0.6);
+}
+
+.game-icon { font-size: 38px; margin-bottom: auto; }
+.game-card h3 { font-size: 20px; margin-top: 20px; }
+.game-card p { color: #999; font-size: 12px; }
+
+/* LATEST VIDEOS */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.video-card {
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: 0.35s;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(245,196,81,0.12);
+}
+
+.video-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.video-card:hover .video-thumb img { transform: scale(1.05); }
+
+.play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245,196,81,0.95);
+  color: #050505;
+  font-size: 24px;
+  box-shadow: 0 0 30px rgba(245,196,81,0.35);
+}
+
+.video-info { padding: 20px; }
+.video-info h3 {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.video-btn {
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff0b5, #d69f21);
+  color: #080808;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* SOCIAL */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.social {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 25px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.social:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.social-icon { font-size: 30px; margin-bottom: 10px; }
+.social h3 { color: var(--gold); }
+.social p { color: #999; font-size: 13px; }
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 55px 25px;
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(245,196,81,0.12),
+      transparent 60%
+    ),
+    rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+}
+
+.email {
+  display: inline-block;
+  color: var(--gold-light);
+  font-size: clamp(18px, 4vw, 26px);
+  font-weight: bold;
+  text-decoration: none;
+  margin: 18px 0 25px;
+  overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(245,196,81,0.14);
+  padding: 30px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+}
+
+footer strong { color: var(--gold); }
+
+/* MOBILE */
+@media (max-width: 850px) {
+  .nav-links { display: none; }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  .nav-links.open{display:flex}
-  .menu-btn{display:block}
-  .nav-btn{display:none}
-  .hero{min-height:590px}
-  .games,.video-grid{grid-template-columns:1fr 1fr}
-  .about-box{grid-template-columns:1fr}
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons { justify-content: center; }
+  .hero-image { order: -1; }
+
+  .hero-image img { width: min(85vw, 430px); }
+  .games { grid-template-columns: repeat(2, 1fr); }
+  .video-grid { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: 1fr; }
 }
-@media(max-width:520px){
-  .hero{min-height:570px;padding:65px 0 90px}
-  .hero h1{letter-spacing:-2px}
-  section{padding:65px 0}
-  .games,.video-grid,.social-grid{grid-template-columns:1fr}
-  .section-top{align-items:flex-start;flex-direction:column}
-  .game-card{min-height:230px}
-  .about-visual{min-height:200px}
-  .hero-bottom{font-size:11px}
+
+@media (max-width: 520px) {
+  .hero { padding-top: 110px; }
+
+  .hero h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .hero p { font-size: 14px; }
+  section { padding: 65px 18px; }
+  .stats { grid-template-columns: 1fr; }
+
+  .games {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .game-card {
+    min-height: 150px;
+    padding: 20px 15px;
+  }
+
+  .game-card h3 { font-size: 16px; }
+  .about-box { padding: 25px; }
+  .btn { width: 100%; }
+
+  .ttg-luxury {
+    padding: 35px 20px;
+    border-radius: 20px;
+  }
+
+  .ttg-subscribe {
+    width: 100%;
+    padding: 15px 12px;
+    font-size: 13px;
+  }
+
+  .ttg-luxury .ttg-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="grid-bg"></div>
 
-<header>
-  <div class="container nav">
-    <a href="#home" class="logo">ADITYA <span>TTG</span></a>
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#games">Games</a>
-      <a href="#about">About</a>
-      <a href="#videos">Videos</a>
-      <a href="#community">Community</a>
-    </nav>
+    <a href="#home" class="logo">
+      ADITYA <span>GAMING TTG</span>
+    </a>
 
-    <a class="nav-btn" href="https://youtube.com/@adityagamingttgofficial" target="_blank" rel="noopener">SUBSCRIBE ↗</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#join">JOIN TTG</a></li>
+      <li><a href="#games">GAMES</a></li>
+      <li><a href="#videos">VIDEOS</a></li>
+      <li><a href="#social">SOCIAL</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+
   </div>
-</header>
+</nav>
 
-<main>
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow"><span class="dot"></span> OFFICIAL GAMING CHANNEL</div>
+  <div class="hero-container">
 
-      <h1>PLAY BOLD.<br><span>LIVE EPIC.</span></h1>
+    <div class="hero-content">
+
+      <div class="badge">OFFICIAL GAMING WEBSITE</div>
+
+      <h1>
+        ADITYA<br>
+        <span>GAMING TTG</span>
+      </h1>
 
       <p>
-        Welcome to the world of Aditya Gaming TTG.
-        Gaming, entertainment and unforgettable moments —
-        all in one place.
+        Welcome to the official home of Aditya Gaming TTG —
+        gaming videos, Free Fire MAX, live streams, highlights,
+        challenges and much more.
       </p>
 
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="https://youtube.com/@adityagamingttgofficial" target="_blank" rel="noopener">▶ WATCH CHANNEL</a>
-        <a class="btn btn-outline" href="#games">EXPLORE MORE ↓</a>
+      <div class="buttons">
+
+        <a
+          href="https://youtube.com/@adityagamingttgofficial"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-gold">
+          ▶ YouTube Channel
+        </a>
+
+        <a
+          href="#games"
+          class="btn btn-dark">
+          🎮 Explore Gaming
+        </a>
+
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <strong>TTG</strong>
+          <span>ARMY</span>
+        </div>
+
+        <div class="stat">
+          <strong>4+</strong>
+          <span>Gaming Categories</span>
+        </div>
+
+        <div class="stat">
+          <strong>INDIA 🇮🇳</strong>
+          <span>Gaming Creator</span>
+        </div>
+
       </div>
     </div>
-    <div class="hero-bottom">GAMING <span>•</span> ENTERTAINMENT <span>•</span> COMMUNITY</div>
+
+    <!-- PROFILE IMAGE -->
+    <div class="hero-image">
+      <img
+        src="IMG_20260318_141537_384.webp"
+        alt="Aditya Gaming TTG Gaming Profile">
+    </div>
+
   </div>
 </section>
 
-<section id="games">
-  <div class="container">
-    <div class="section-top reveal">
-      <div>
-        <div class="kicker">THE PLAYGROUND</div>
-        <h2 class="section-title">FEATURED <span>GAMES</span></h2>
-        <p class="section-desc">Enter the worlds. Experience the action.</p>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-container">
+
+    <div class="section-title">
+      <small>WHO AM I?</small>
+      <h2>ABOUT ME</h2>
+      <p>Welcome to the world of Aditya Gaming TTG.</p>
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        Hey Everyone! This is <span class="highlight">Aditya</span> here!
+        Welcome to the official website of
+        <span class="highlight">Aditya Gaming TTG</span>.
+      </p>
+
+      <p>
+        I created this channel for Android games and PC games.
+        I upload gaming videos, gaming highlights, live streams
+        and gaming-related content.
+      </p>
+
+      <p>
+        If you're interested in gaming, Free Fire MAX,
+        GTA V, Minecraft and other exciting games,
+        you're in the right place.
+      </p>
+
+      <p>
+        My goal is to build an amazing gaming community where
+        every viewer can become a part of the
+        <span class="highlight">TTG Army 🇮🇳</span>.
+      </p>
+
+      <p>
+        Subscribe to Aditya Gaming TTG and join the journey.
+        ❤️🔥
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- LUXURY JOIN THE TTG ARMY -->
+<section id="join">
+  <div class="section-container">
+
+    <div class="ttg-luxury">
+
+      <div class="ttg-crown">👑</div>
+
+      <div class="ttg-label">
+        THE OFFICIAL GAMING COMMUNITY
       </div>
+
+      <h2>
+        JOIN THE <span>TTG ARMY</span>
+      </h2>
+
+      <p>
+        Gaming • Live Streams • Epic Moments
+      </p>
+
+      <a
+        href="https://www.youtube.com/@adityagamingttgofficial?sub_confirmation=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ttg-subscribe">
+        ▶ SUBSCRIBE NOW
+      </a>
+
+      <div class="ttg-footer">
+        ADITYA GAMING TTG · INDIA 🇮🇳
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GAMES -->
+<section id="games">
+  <div class="section-container">
+
+    <div class="section-title">
+      <small>WHAT I PLAY</small>
+      <h2>MY GAMES</h2>
+      <p>From competitive battles to open-world adventures.</p>
     </div>
 
     <div class="games">
-      <article class="game-card reveal">
-        <div class="game-number">01</div>
-        <div class="game-icon">🎯</div>
-        <div class="game-tag">BATTLE ROYALE</div>
+
+      <div class="game-card">
+        <div class="game-icon">🔥</div>
         <h3>FREE FIRE MAX</h3>
-        <p>Intense battles. Epic moments.</p>
-      </article>
+        <p>Rank Push • Shorts • Live</p>
+      </div>
 
-      <article class="game-card reveal">
-        <div class="game-number">02</div>
-        <div class="game-icon">🚘</div>
-        <div class="game-tag">OPEN WORLD</div>
+      <div class="game-card">
+        <div class="game-icon">🚗</div>
         <h3>GTA V</h3>
-        <p>Explore. Drive. Create chaos.</p>
-      </article>
+        <p>Open World • Missions • Fun</p>
+      </div>
 
-      <article class="game-card reveal">
-        <div class="game-number">03</div>
+      <div class="game-card">
         <div class="game-icon">⛏️</div>
-        <div class="game-tag">ADVENTURE</div>
         <h3>MINECRAFT</h3>
-        <p>Build your world. Make it legendary.</p>
-      </article>
+        <p>Survival • Builds • Adventures</p>
+      </div>
+
+      <div class="game-card">
+        <div class="game-icon">🎮</div>
+        <h3>MORE GAMES</h3>
+        <p>New games coming soon</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section id="about">
-  <div class="container">
-    <div class="about-box reveal">
-      <div class="about-copy">
-        <div class="kicker">WHO WE ARE</div>
-        <h2 class="section-title">WELCOME TO<br><span>ADITYA GAMING TTG</span></h2>
-        <p>
-          This is more than a gaming channel.
-          It's a place for creativity, entertainment and a
-          community that loves gaming. Join the journey
-          and be part of every new adventure.
-        </p>
-        <a class="btn btn-primary" href="https://youtube.com/@adityagamingttgofficial" target="_blank" rel="noopener">JOIN THE JOURNEY ↗</a>
-      </div>
-      <div class="about-visual">
-        <strong>ADITYA<br>GAMING<br>TTG</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- LATEST VIDEOS -->
 <section id="videos">
-  <div class="container">
-    <div class="section-top reveal">
-      <div>
-        <div class="kicker">WATCH & ENJOY</div>
-        <h2 class="section-title">LATEST <span>VIDEOS</span></h2>
-        <p class="section-desc">Check out videos from the channel.</p>
-      </div>
-      <a class="btn btn-outline" href="https://youtube.com/@adityagamingttgofficial" target="_blank" rel="noopener">ALL VIDEOS ↗</a>
+  <div class="section-container">
+
+    <div class="section-title">
+      <small>WATCH NOW</small>
+      <h2>LATEST VIDEOS</h2>
+      <p>Watch the latest gaming content from Aditya Gaming TTG.</p>
     </div>
 
     <div class="video-grid">
-      <a class="video-card reveal" href="https://www.youtube.com/watch?v=jf1TO2BAB7g" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/jf1TO2BAB7g/hqdefault.jpg" alt="Aditya Gaming TTG video thumbnail" loading="lazy">
-          <div class="play">▶</div>
-        </div>
+
+      <!-- VIDEO 1 -->
+      <div class="video-card">
+        <a
+          href="https://youtu.be/jf1TO2BAB7g"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-thumb">
+
+          <img
+            src="https://img.youtube.com/vi/jf1TO2BAB7g/maxresdefault.jpg"
+            alt="Aditya Gaming TTG Free Fire video"
+            loading="lazy">
+
+          <div class="play-button">▶</div>
+        </a>
+
         <div class="video-info">
-          <h3>Watch Video</h3>
-          <p>ADITYA GAMING TTG • YOUTUBE</p>
-        </div>
-      </a>
+          <h3>FREE FIRE ❤️ EMOTIONAL STORY | Wakh Ho Jana Song Montage</h3>
 
-      <a class="video-card reveal" href="https://www.youtube.com/watch?v=aCP07hSbVmg" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/aCP07hSbVmg/hqdefault.jpg" alt="Aditya Gaming TTG video thumbnail" loading="lazy">
-          <div class="play">▶</div>
+          <a
+            href="https://youtu.be/jf1TO2BAB7g"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-btn">
+            ▶ WATCH NOW
+          </a>
         </div>
-        <div class="video-info">
-          <h3>Watch Video</h3>
-          <p>ADITYA GAMING TTG • YOUTUBE</p>
-        </div>
-      </a>
-
-      <a class="video-card reveal" href="https://www.youtube.com/watch?v=pyGrKqsE5KA" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/pyGrKqsE5KA/hqdefault.jpg" alt="Aditya Gaming TTG video thumbnail" loading="lazy">
-          <div class="play">▶</div>
-        </div>
-        <div class="video-info">
-          <h3>Watch Video</h3>
-          <p>ADITYA GAMING TTG • YOUTUBE</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="community">
-  <div class="container">
-    <div class="community reveal">
-      <div class="kicker">BE PART OF THE COMMUNITY</div>
-      <h2>JOIN THE <span>TTG ARMY</span></h2>
-      <p>Subscribe, stay connected and enjoy the journey.</p>
-      <a class="btn btn-primary" href="https://youtube.com/@adityagamingttgofficial" target="_blank" rel="noopener">SUBSCRIBE ON YOUTUBE ↗</a>
-    </div>
-  </div>
-</section>
-
-<section id="social">
-  <div class="container">
-    <div class="section-top reveal">
-      <div>
-        <div class="kicker">STAY CONNECTED</div>
-        <h2 class="section-title">FOLLOW <span>THE JOURNEY</span></h2>
       </div>
+
+      <!-- VIDEO 2 -->
+      <div class="video-card">
+        <a
+          href="https://youtu.be/aCP07hSbVmg"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-thumb">
+
+          <img
+            src="https://img.youtube.com/vi/aCP07hSbVmg/maxresdefault.jpg"
+            alt="Aditya Gaming TTG Free Fire montage"
+            loading="lazy">
+
+          <div class="play-button">▶</div>
+        </a>
+
+        <div class="video-info">
+          <h3>Saiyaara Song Free Fire Montage | Brothers & Sister Emotional Gameplay</h3>
+
+          <a
+            href="https://youtu.be/aCP07hSbVmg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-btn">
+            ▶ WATCH NOW
+          </a>
+        </div>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="video-card">
+        <a
+          href="https://youtu.be/pyGrKqsE5KA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-thumb">
+
+          <img
+            src="https://img.youtube.com/vi/pyGrKqsE5KA/maxresdefault.jpg"
+            alt="Aditya Gaming TTG Minecraft video"
+            loading="lazy">
+
+          <div class="play-button">▶</div>
+        </a>
+
+        <div class="video-info">
+          <h3>MINECRAFT WITH KEYBOARD MOUSE | THE ULTIMATE MOBILE EXPERIENCE!</h3>
+
+          <a
+            href="https://youtu.be/pyGrKqsE5KA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-btn">
+            ▶ WATCH NOW
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="section-container">
+
+    <div class="section-title">
+      <small>CONNECT WITH ME</small>
+      <h2>SOCIALS</h2>
+      <p>Follow Aditya Gaming TTG across social platforms.</p>
     </div>
 
     <div class="social-grid">
-      <a class="social-card reveal" href="https://youtube.com/@adityagamingttgofficial" target="_blank" rel="noopener">
-        <div class="social-icon">▶</div>
-        <strong>YouTube</strong>
-        <span>Watch videos and subscribe ↗</span>
+
+      <!-- YOUTUBE -->
+      <a
+        class="social"
+        href="https://youtube.com/@adityagamingttgofficial"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <div class="social-icon">▶️</div>
+        <h3>YouTube</h3>
+        <p>Gaming videos, Shorts & live streams</p>
       </a>
 
-      <a class="social-card reveal" href="https://www.instagram.com/adityagamingttg" target="_blank" rel="noopener">
-        <div class="social-icon">◎</div>
-        <strong>Instagram</strong>
-        <span>Follow on Instagram ↗</span>
+      <!-- INSTAGRAM -->
+      <a
+        class="social"
+        href="https://www.instagram.com/adityagamingttg"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <div class="social-icon">📸</div>
+        <h3>Instagram</h3>
+        <p>Gaming updates & community content</p>
       </a>
 
-      <a class="social-card reveal" href="https://www.twitter.com/AdityaTtg63348" target="_blank" rel="noopener">
+      <!-- X -->
+      <a
+        class="social"
+        href="https://www.twitter.com/AdityaTtg63348"
+        target="_blank"
+        rel="noopener noreferrer">
+
         <div class="social-icon">𝕏</div>
-        <strong>X / Twitter</strong>
-        <span>Connect on X ↗</span>
+        <h3>Twitter / X</h3>
+        <p>Updates, announcements & gaming posts</p>
       </a>
+
     </div>
   </div>
 </section>
-</main>
 
-<footer>
-  <div class="container">
-    <div class="footer-logo">ADITYA <strong>GAMING TTG</strong></div>
-    <p>Gaming • Entertainment • Community</p>
-    <p style="margin-top:12px">© <span id="year"></span> Aditya Gaming TTG. All rights reserved.</p>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-container">
+
+    <div class="contact">
+
+      <div class="section-title" style="margin-bottom: 10px;">
+        <small>BUSINESS & COLLABORATIONS</small>
+        <h2>LET'S WORK TOGETHER</h2>
+      </div>
+
+      <p style="color:#aaa;">
+        For gaming collaborations, product reviews,
+        gadgets, apps and business enquiries:
+      </p>
+
+      <a
+        class="email"
+        href="mailto:adityagamingttg@gmail.com">
+        adityagamingttg@gmail.com
+      </a>
+
+      <br>
+
+      <a
+        href="mailto:adityagamingttg@gmail.com"
+        class="btn btn-gold">
+        ✉ Send Business Email
+      </a>
+
+    </div>
   </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © <span id="year"></span>
+    <strong>Aditya Gaming TTG</strong>.
+    All Rights Reserved.
+  </p>
+
+  <p style="margin-top:6px;">
+    Built for the <strong>TTG Army 🇮🇳</strong>
+  </p>
 </footer>
 
+<!-- YEAR SCRIPT -->
 <script>
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-  menuBtn.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.textContent = "☰";
-  });
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, {threshold:0.12});
-
-document.querySelectorAll(".reveal").forEach(item => observer.observe(item));
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
+
 </body>
 </html>
